@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lingxi AI 助手</title>
+    <link rel="stylesheet" href="./css/index.css" />
+  </head>
+  <body>
+    <div class="app" id="app">
+      <button id="quickKeyBtn" class="quick-key-btn" title="设置 API Key">Key</button>
+      <main class="chat-main">
+        <div id="apiKeyBanner" class="api-key-banner hidden">
+          <span>未设置百炼 API Key，当前无法发送消息。</span>
+          <button id="apiKeyBtn" class="mini-btn">立即设置</button>
+        </div>
+        <section id="welcomeSection" class="welcome-section">
+          <h1 class="hero-title">嗨，我是灵犀</h1>
+          <p class="hero-subtitle">我能帮你什么吗?</p>
+          <div id="suggestions" class="suggestions"></div>
+        </section>
+
+        <section id="chatList" class="chat-list"></section>
+      </main>
+
+      <footer class="composer">
+        <div id="previewArea" class="preview-area"></div>
+        <div class="composer-row">
+          <div class="input-shell">
+            <textarea
+              id="messageInput"
+              rows="1"
+              placeholder="有问题尽管问我"
+            ></textarea>
+            <div class="btn-group">
+              <label for="imageInput" class="inside-icon attach-icon" title="上传图片">📎</label>
+              <button id="settingsBtn" class="inside-icon setting-icon" title="设置">⚙</button>
+              <button id="quickClearBtn" class="inside-icon clear-icon" title="清空对话">🗑</button>
+              <button id="stopBtn" class="inside-icon send-stop hidden" title="停止">◼</button>
+              <button id="sendBtn" class="inside-icon send-icon hidden" title="发送">➤</button>
+            </div>
+          </div>
+          <input id="imageInput" type="file" accept="image/*" hidden />
+        </div>
+        <div id="settingsPanel" class="settings-panel hidden">
+          <div class="setting-row">
+            <label for="modelSelect">模型</label>
+            <select id="modelSelect">
+              <option value="qwen-plus">qwen-plus</option>
+              <option value="qwen-turbo">qwen-turbo</option>
+              <option value="qwen-max">qwen-max</option>
+            </select>
+          </div>
+          <div class="setting-row">
+            <label for="tempRange">温度</label>
+            <input id="tempRange" type="range" min="0" max="2" step="0.1" value="0.7" />
+            <span id="tempValue">0.7</span>
+          </div>
+          <div class="setting-actions">
+            <button id="themeToggleBtn" class="panel-btn">切换主题</button>
+            <button id="clearBtn" class="panel-btn danger">清空对话</button>
+          </div>
+        </div>
+        <p class="disclaimer">内容由 AI 大模型生成，请仔细甄别</p>
+      </footer>
+    </div>
+
+    <script src="./js/index.js"></script>
+  </body>
+</html>
