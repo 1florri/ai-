@@ -1,10 +1,6 @@
 # Lingxi AI 对话助手作业说明
 
 ## 1. 项目基本信息
-- 姓名：胡天怡
-- 学校：武汉科技大学
-- 学号：202313407457
-- 作业目录：`week04/homework/lingxi`
 - 运行方式：使用 VSCode / Cursor 的 Live Server 插件直接打开 `index.html`
 
 ## 2. 开发任务索引
