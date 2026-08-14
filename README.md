@@ -1,4 +1,4 @@
-# Lingxi AI 对话助手作业说明
+# Lingxi AI 对话助手说明
 
 ## 1. 项目基本信息
 - 运行方式：使用 VSCode / Cursor 的 Live Server 插件直接打开 `index.html`
